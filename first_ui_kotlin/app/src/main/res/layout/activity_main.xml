@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#5CF5FFA3">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginTop="50dp">
+
+            <TextView
+                android:id="@+id/greetingTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/name_msg"
+                android:textSize="18sp"
+                android:textColor="@color/text_color_primary"
+                android:paddingBottom="4dp"/>
+
+            <EditText
+                android:id="@+id/nameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name_hint"
+                android:inputType="text"/>
+
+            <Button
+                android:id="@+id/greetButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/greet_me_btn"
+                android:backgroundTint="#585B21"
+                android:layout_gravity="center"/>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="@dimen/cardview_default_radius"
+                android:src="@drawable/b"
+                android:scaleType="centerCrop"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <CheckBox
+                    android:id="@+id/subscribeCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/subscribe"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="15sp"
+                    app:buttonTint="#800000"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+                    <TextView
+                        android:id="@+id/notificationLeble"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/enable_notifications"
+                        android:textSize="15sp"
+                        android:textColor="@color/text_color_primary"
+                        android:paddingBottom="4dp"/>
+
+                    <Switch
+                        android:id="@+id/notificationSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/cardview_default_radius"
+                        android:text="@null"
+                        app:useMaterialThemeColors="false"
+                        android:trackTint="#7B8700"
+                        android:thumbTint="#7B8700"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/favorite_color"
+                android:gravity="center_vertical"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/colorRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp">
+                <RadioButton
+                    android:id="@+id/redRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/red"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="#000000"
+                    app:buttonTint="#F44336"/>
+
+                <RadioButton
+                    android:id="@+id/orangeRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/orange"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="#000000"
+                    app:buttonTint="#FF9800"/>
+
+                <RadioButton
+                    android:id="@+id/yellowRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yellow"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="#000000"
+                    app:buttonTint="#FFBF00"/>
+
+                <RadioButton
+                    android:id="@+id/greenRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/green"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="#000000"
+                    app:buttonTint="#00FF0B"/>
+
+                <RadioButton
+                    android:id="@+id/blueRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/blue"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="#000000"
+                    app:buttonTint="#0077FF"/>
+
+                <RadioButton
+                    android:id="@+id/purpleRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/purple"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="#000000"/>
+
+                <RadioButton
+                    android:id="@+id/pinkRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pink"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="#000000"
+                    app:buttonTint="#FF00AE"/>
+
+                <RadioButton
+                    android:id="@+id/brownRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/brown"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="#000000"
+                    app:buttonTint="#8C2200"/>
+
+                <RadioButton
+                    android:id="@+id/blackRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/black"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="#000000"
+                    app:buttonTint="#000000"/>
+
+                <RadioButton
+                    android:id="@+id/whiteRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/white"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="#000000"
+                    app:buttonTint="#FFFFFF"/>
+
+                <RadioButton
+                    android:id="@+id/grayRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gray"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="#000000"
+                    app:buttonTint="#7E7E7E"/>
+
+                <RadioButton
+                    android:id="@+id/magentaRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/magenta"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="#000000"
+                    app:buttonTint="#B300C5"/>
+            </RadioGroup>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/seekBarLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/volume"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:layout_marginBottom="8dp"/>
+
+                <SeekBar
+                    android:id="@+id/volumeSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="15"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:progressTint="#7B8700"
+                    android:thumbTint="#7B8700"/>
+
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/countrySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:layout_marginBottom="8dp"/>
+
+            <ProgressBar
+                android:id="@+id/loadingProgressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="0"
+                android:visibility="gone"
+                android:layout_marginBottom="8dp"
+                android:progressTint="#585B21"/>
+
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/submit"
+                android:backgroundTint="#585B21"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:layout_marginBottom="50dp"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

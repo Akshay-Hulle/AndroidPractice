@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">First UI</string>
+    <string name="name_msg">Hello, please enter your name!</string>
+    <string name="name_hint">Enter your name</string>
+    <string name="greet_me_btn">Greet Me</string>
+    <string name="image_content_description">Naute image</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="enable_notifications">Enable notifications</string>
+    <string name="favorite_color">Choose your favorite color: </string>
+    <string name="red">Red</string>
+    <string name="orange">Orange</string>
+    <string name="yellow">Yellow</string>
+    <string name="green">Green</string>
+    <string name="blue">Blue</string>
+    <string name="purple">Purple</string>
+
+    <string name="pink">Pink</string>
+    <string name="brown">Brown</string>
+    <string name="black">Black</string>
+    <string name="white">White</string>
+    <string name="gray">Gray</string>
+    <string name="magenta">Magenta</string>
+    <string name="volume">Volume</string>
+    <string name="submit">Submit</string>
+
+    <string name="eng">Engine Warning Light</string>
+
+</resources>

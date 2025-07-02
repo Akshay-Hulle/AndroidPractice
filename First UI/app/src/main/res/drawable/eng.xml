@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <automotive_cluster_telltales>
+        <telltale>
+            <name>Engine Warning Light</name>
+            <symbol>engine_block_shaped</symbol>
+            <color>yellow</color>
+            <meaning>Possible engine issue</meaning>
+            <action>Check immediately</action>
+        </telltale>
+        <telltale>
+            <name>Oil Pressure Warning</name>
+            <symbol>oil_can_dripping</symbol>
+            <color>red</color>
+            <meaning>Low oil pressure</meaning>
+            <action>Stop and check the oil</action>
+        </telltale>
+        <telltale>
+            <name>Battery Warning</name>
+            <symbol>battery_icon</symbol>
+            <color>red</color>
+            <meaning>Charging issue</meaning>
+            <action>Inspect battery/alternator</action>
+        </telltale>
+        <telltale>
+            <name>ABS Warning</name>
+            <symbol>ABS_within_circle</symbol>
+            <color>yellow</color>
+            <meaning>Anti-lock brake system fault</meaning>
+            <action>Drive cautiously</action>
+        </telltale>
+    </automotive_cluster_telltales>
+</selector>
