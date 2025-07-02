@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default margin for cardview and other items -->
+    <dimen name="cardview_default_radius">16dp</dimen>
+
+    <!-- Padding for the LinearLayout -->
+    <dimen name="linear_layout_padding">16dp</dimen>
+    <dimen name="Padding_large">24dp</dimen>
+    <dimen name="Padding_medium">12dp</dimen>
+    <dimen name="Padding_small">4dp</dimen>
+
+    <!-- Margins for views -->
+    <dimen name="margin_top">24dp</dimen>
+    <dimen name="margin_large">50dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+
+    <!-- Text Size for Labels -->
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_size_medium">15sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+
+    <!-- Button Height -->
+    <dimen name="button_height">48dp</dimen>
+
+    <!-- Image View Height -->
+    <dimen name="image_view_height">200dp</dimen>
+
+    <!-- Spinner Height -->
+    <dimen name="spinner_min_height">48dp</dimen>
+
+    <!-- Progress Bar Max Value -->
+    <dimen name="progress_bar_max">100dp</dimen>
+
+
+
+
+
+
+</resources>

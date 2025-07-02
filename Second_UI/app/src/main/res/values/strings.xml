@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">second_ui</string>
+    <string name="all_doors_closed">All doors closed</string>
+    <string name="front_left_open">Front-left open</string>
+    <string name="front_right_open">Front-right open</string>
+    <string name="rear_left_open">Rear-left open</string>
+    <string name="rear_right_open">Rear-right open</string>
+    <string name="both_front_doors_open">Both front doors open</string>
+    <string name="left_side_doors_open">Left-side doors open</string>
+    <string name="front_left_rear_right_open">Front-left Rear-right open</string>
+    <string name="front_right_rear_left_open">Front-right  Rear-left open</string>
+    <string name="right_side_doors_open">Right-side doors open</string>
+    <string name="both_rear_doors_open">Both rear doors open</string>
+    <string name="except_rear_right">3 doors open (except rear-right)</string>
+    <string name="except_rear_left">3 doors open (except rear-left)</string>
+    <string name="except_front_right">3 doors open (except front-right)</string>
+    <string name="except_front_left">3 doors open (except front-left)</string>
+    <string name="all_doors_open">All doors open</string>
 </resources>

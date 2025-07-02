@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#5CF5FFA3">
+    android:background="@color/background_color">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -15,23 +15,24 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/margin_top">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp"
-            android:layout_marginTop="50dp">
+            android:padding="@dimen/linear_layout_padding"
+            android:layout_marginTop="@dimen/margin_top">
 
             <TextView
                 android:id="@+id/greetingTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/name_msg"
-                android:textSize="18sp"
+                android:textSize="@dimen/text_size_large"
                 android:textColor="@color/text_color_primary"
-                android:paddingBottom="4dp"/>
+                android:paddingBottom="@dimen/Padding_small"/>
 
             <EditText
                 android:id="@+id/nameEditText"
@@ -45,14 +46,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/greet_me_btn"
-                android:backgroundTint="#585B21"
+                android:backgroundTint="@color/button_background_color"
                 android:layout_gravity="center"/>
 
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_marginTop="@dimen/cardview_default_radius"
+                android:layout_marginTop="@dimen/margin_small"
                 android:src="@drawable/b"
                 android:scaleType="centerCrop"/>
             <LinearLayout
@@ -66,8 +67,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/subscribe"
                     android:textColor="@color/text_color_primary"
-                    android:textSize="15sp"
-                    app:buttonTint="#800000"/>
+                    android:textSize="@dimen/text_size_medium"
+                    app:buttonTint="@color/checkbox_text_color"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -77,9 +78,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="@string/enable_notifications"
-                        android:textSize="15sp"
+                        android:textSize="@dimen/text_size_medium"
                         android:textColor="@color/text_color_primary"
-                        android:paddingBottom="4dp"/>
+                        android:paddingBottom="@dimen/Padding_small"/>
 
                     <Switch
                         android:id="@+id/notificationSwitch"
@@ -88,8 +89,8 @@
                         android:layout_marginLeft="@dimen/cardview_default_radius"
                         android:text="@null"
                         app:useMaterialThemeColors="false"
-                        android:trackTint="#7B8700"
-                        android:thumbTint="#7B8700"/>
+                        android:trackTint="@color/switch_track_tint"
+                        android:thumbTint="@color/switch_thumb_tint"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -98,123 +99,124 @@
                 android:layout_height="match_parent"
                 android:text="@string/favorite_color"
                 android:gravity="center_vertical"
-                android:textSize="18sp"
-                android:textColor="@color/black"
-                android:layout_marginTop="16dp"/>
+                android:textSize="@dimen/text_size_large"
+                android:textColor="@color/text_color_primary"
+                android:layout_marginTop="@dimen/margin_small"/>
 
             <RadioGroup
                 android:id="@+id/colorRadioGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="16dp">
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_small">
                 <RadioButton
                     android:id="@+id/redRadioButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/red"
-                    android:layout_marginEnd="8dp"
-                    android:textColor="#000000"
-                    app:buttonTint="#F44336"/>
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:textColor="@color/text_color_primary"
+                    app:buttonTint="@color/radio_button_red"/>
 
                 <RadioButton
                     android:id="@+id/orangeRadioButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/orange"
-                    android:layout_marginEnd="8dp"
-                    android:textColor="#000000"
-                    app:buttonTint="#FF9800"/>
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:textColor="@color/text_color_primary"
+                    app:buttonTint="@color/radio_button_orange"/>
 
                 <RadioButton
                     android:id="@+id/yellowRadioButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/yellow"
-                    android:layout_marginEnd="8dp"
-                    android:textColor="#000000"
-                    app:buttonTint="#FFBF00"/>
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:textColor="@color/text_color_primary"
+                    app:buttonTint="@color/radio_button_yellow"/>
 
                 <RadioButton
                     android:id="@+id/greenRadioButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/green"
-                    android:layout_marginEnd="8dp"
-                    android:textColor="#000000"
-                    app:buttonTint="#00FF0B"/>
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:textColor="@color/text_color_primary"
+                    app:buttonTint="@color/radio_button_green"/>
 
                 <RadioButton
                     android:id="@+id/blueRadioButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/blue"
-                    android:layout_marginEnd="8dp"
-                    android:textColor="#000000"
-                    app:buttonTint="#0077FF"/>
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:textColor="@color/text_color_primary"
+                    app:buttonTint="@color/radio_button_blue"/>
 
                 <RadioButton
                     android:id="@+id/purpleRadioButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/purple"
-                    android:layout_marginEnd="8dp"
-                    android:textColor="#000000"/>
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:textColor="@color/text_color_primary"
+                    app:buttonTint="@color/radio_button_purple"/>
 
                 <RadioButton
                     android:id="@+id/pinkRadioButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/pink"
-                    android:layout_marginEnd="8dp"
-                    android:textColor="#000000"
-                    app:buttonTint="#FF00AE"/>
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:textColor="@color/text_color_primary"
+                    app:buttonTint="@color/radio_button_pink"/>
 
                 <RadioButton
                     android:id="@+id/brownRadioButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/brown"
-                    android:layout_marginEnd="8dp"
-                    android:textColor="#000000"
-                    app:buttonTint="#8C2200"/>
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:textColor="@color/text_color_primary"
+                    app:buttonTint="@color/radio_button_brown"/>
 
                 <RadioButton
                     android:id="@+id/blackRadioButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/black"
-                    android:layout_marginEnd="8dp"
-                    android:textColor="#000000"
-                    app:buttonTint="#000000"/>
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:textColor="@color/text_color_primary"
+                    app:buttonTint="@color/radio_button_black"/>
 
                 <RadioButton
                     android:id="@+id/whiteRadioButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/white"
-                    android:layout_marginEnd="8dp"
-                    android:textColor="#000000"
-                    app:buttonTint="#FFFFFF"/>
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:textColor="@color/text_color_primary"
+                    app:buttonTint="@color/radio_button_white"/>
 
                 <RadioButton
                     android:id="@+id/grayRadioButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/gray"
-                    android:layout_marginEnd="8dp"
-                    android:textColor="#000000"
-                    app:buttonTint="#7E7E7E"/>
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:textColor="@color/text_color_primary"
+                    app:buttonTint="@color/radio_button_gray"/>
 
                 <RadioButton
                     android:id="@+id/magentaRadioButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/magenta"
-                    android:layout_marginEnd="8dp"
-                    android:textColor="#000000"
-                    app:buttonTint="#B300C5"/>
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:textColor="@color/text_color_primary"
+                    app:buttonTint="@color/radio_button_magenta"/>
             </RadioGroup>
 
 
@@ -228,20 +230,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/volume"
-                    android:textSize="18sp"
-                    android:textColor="#000000"
-                    android:layout_marginBottom="8dp"/>
+                    android:textSize="@dimen/text_size_large"
+                    android:textColor="@color/text_color_primary"
+                    android:layout_marginBottom="@dimen/margin_small"/>
 
                 <SeekBar
                     android:id="@+id/volumeSeekBar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:max="15"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:progressTint="#7B8700"
-                    android:thumbTint="#7B8700"/>
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_medium"
+                    android:layout_marginEnd="@dimen/margin_medium"
+                    android:progressTint="@color/switch_track_tint"
+                    android:thumbTint="@color/switch_thumb_tint"/>
 
             </LinearLayout>
 
@@ -249,7 +251,7 @@
                 android:id="@+id/countrySpinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="48dp"
+                android:minHeight="@dimen/spinner_min_height"
                 android:layout_marginBottom="8dp"/>
 
             <ProgressBar
@@ -260,18 +262,18 @@
                 android:max="100"
                 android:progress="0"
                 android:visibility="gone"
-                android:layout_marginBottom="8dp"
-                android:progressTint="#585B21"/>
+                android:layout_marginBottom="@dimen/margin_small"
+                android:progressTint="@color/progress_bar_tint"/>
 
             <Button
                 android:id="@+id/submitButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/submit"
-                android:backgroundTint="#585B21"
+                android:backgroundTint="@color/button_background_color"
                 android:layout_gravity="center"
-                android:textSize="18sp"
-                android:layout_marginBottom="50dp"/>
+                android:textSize="@dimen/text_size_large"
+                android:layout_marginBottom="@dimen/margin_large"/>
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

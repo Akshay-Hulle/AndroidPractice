@@ -1,10 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="light_yellow_background">#F5FFA3</color>
-    <color name="button_background_color">#585B21</color>
     <color name="button_text_color">#FFFFFF</color>
-    <color name="text_color_primary">#000000</color>
     <color name="myOrange">#FF8C00</color>
+
+        <!-- Primary Text Colors -->
+        <color name="text_color_primary">#000000</color> <!-- Black -->
+
+        <!-- Background and Button Tint Colors -->
+        <color name="background_color">#5CF5FFA3</color> <!-- Background Color -->
+        <color name="button_background_color">#585B21</color> <!-- Button Background -->
+
+        <!-- Color for CheckBox and other Text Elements -->
+        <color name="checkbox_text_color">#800000</color> <!-- Dark Red -->
+
+        <!-- Color for RadioButtons -->
+        <color name="radio_button_red">#F44336</color>
+        <color name="radio_button_orange">#FF9800</color>
+        <color name="radio_button_yellow">#FFBF00</color>
+        <color name="radio_button_green">#00FF0B</color>
+        <color name="radio_button_blue">#0077FF</color>
+        <color name="radio_button_purple">#800080</color> <!-- Purple -->
+        <color name="radio_button_pink">#FF00AE</color> <!-- Pink -->
+        <color name="radio_button_brown">#8C2200</color> <!-- Brown -->
+        <color name="radio_button_black">#000000</color> <!-- Black -->
+        <color name="radio_button_white">#FFFFFF</color> <!-- White -->
+        <color name="radio_button_gray">#7E7E7E</color> <!-- Gray -->
+        <color name="radio_button_magenta">#B300C5</color> <!-- Magenta -->
+
+        <!-- Accent Color for other UI elements -->
+        <color name="accent_color">#FF4081</color> <!-- Pinkish Accent Color -->
+
+        <!-- Switch and Progress Bar Colors -->
+        <color name="switch_track_tint">#7B8700</color>
+        <color name="switch_thumb_tint">#7B8700</color>
+        <color name="progress_bar_tint">#585B21</color>
+
 </resources>

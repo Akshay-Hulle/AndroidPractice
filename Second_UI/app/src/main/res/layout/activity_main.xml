@@ -17,7 +17,16 @@
         app:layout_constraintBottom_toTopOf="@id/scrollView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Car Icon ImageView -->
+       <TextView
+           android:id="@+id/doorStetus"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="@string/all_doors_closed"
+           android:gravity="center"/>
 
     </LinearLayout>
     <ScrollView
@@ -51,6 +60,7 @@
                 android:layout_marginLeft="@dimen/extra_small_margin"
                 android:layout_marginRight="@dimen/extra_small_margin">
                 <Button
+                    android:id="@+id/btnFL"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
@@ -58,6 +68,7 @@
                     android:text="FL"
                     android:layout_marginRight="@dimen/extra_small_margin"/>
                 <Button
+                    android:id="@+id/btnFR"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
@@ -65,6 +76,7 @@
                     android:text="FR"
                     android:layout_margin="@dimen/extra_small_margin"/>
                 <Button
+                    android:id="@+id/btnRL"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
@@ -72,6 +84,7 @@
                     android:text="RL"
                     android:layout_margin="@dimen/extra_small_margin"/>
                 <Button
+                    android:id="@+id/btnRR"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
@@ -79,6 +92,7 @@
                     android:text="RR"
                     android:layout_margin="@dimen/extra_small_margin"/>
                 <Button
+                    android:id="@+id/btnAll"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
