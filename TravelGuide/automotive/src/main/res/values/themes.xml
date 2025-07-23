@@ -1,0 +1,4 @@
+<resources>
+
+    <style name="Theme.TravelGuide" parent="android:Theme.Material.Light.DarkActionBar" />
+</resources>

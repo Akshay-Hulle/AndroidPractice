@@ -20,4 +20,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Travel Guide"
-include(":app")
+include(":automotive")
