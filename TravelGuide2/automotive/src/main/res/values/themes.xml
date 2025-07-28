@@ -1,0 +1,7 @@
+<!-- res/values/styles.xml -->
+<resources>
+    <!-- This is your custom theme -->
+    <style name="Theme.TravelGuide2" parent="Theme.AppCompat.Light.DarkActionBar">
+
+    </style>
+</resources>
