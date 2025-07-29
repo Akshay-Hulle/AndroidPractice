@@ -11,5 +11,5 @@ data class SearchQuery(
 data class SearchResult(
     val pageid: Int,
     val title: String,
-    val snippet: String
+    val snippet: String,
 )

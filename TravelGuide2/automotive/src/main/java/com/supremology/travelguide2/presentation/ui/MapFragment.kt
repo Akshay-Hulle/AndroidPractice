@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -49,28 +48,30 @@ class MapFragment : Fragment() {
         val controller = mapView.controller
         controller.setZoom(15.0)
 
-        // Show toast to confirm fragment loaded
-        Toast.makeText(requireContext(), "MapFragment loaded", Toast.LENGTH_SHORT).show()
-
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity())
 
         // ✅ Check if lat/lon were passed from SearchFragment
         arguments?.let {
-            val name = it.getString("place_name") ?: "Selected Place"
-            val lat = it.getDouble("lat", 0.0)
-            val lon = it.getDouble("lon", 0.0)
+            val sourceLat = it.getDouble("source_lat", 0.0)
+            val sourceLon = it.getDouble("source_lon", 0.0)
+            val sourceName = it.getString("source_name") ?: "Source"
 
-            Toast.makeText(requireContext(), "Selected: $name ($lat, $lon)", Toast.LENGTH_LONG).show()
+            val destLat = it.getDouble("dest_lat", 0.0)
+            val destLon = it.getDouble("dest_lon", 0.0)
+            val destName = it.getString("dest_name") ?: "Destination"
 
-            if (lat != 0.0 && lon != 0.0) {
-                var geoPoint = GeoPoint(lat, lon)
-                addMarker(geoPoint, name, clear = true)
-                controller.setCenter(geoPoint)
-                return view
+            if (sourceLat != 0.0 && sourceLon != 0.0) {
+                val sourcePoint = GeoPoint(sourceLat, sourceLon)
+                addMarker(sourcePoint, sourceName, clear = true)
             }
-        }?: run {
-            Toast.makeText(requireContext(), "No arguments passed", Toast.LENGTH_SHORT).show()
+
+            if (destLat != 0.0 && destLon != 0.0) {
+                val destPoint = GeoPoint(destLat, destLon)
+                addMarker(destPoint, destName, clear = false)
+                mapView.controller.setCenter(destPoint)
+            }
         }
+
         // No place passed, so show current location
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity())
         if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.ACCESS_FINE_LOCATION)

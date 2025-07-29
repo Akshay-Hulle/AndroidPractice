@@ -18,10 +18,11 @@ fun GeoSearchItem.toPlace(): Place {
 }
 
 fun SearchResult.toPlace(): Place {
+
     return Place(
         id = this.pageid,
         name = this.title,
-        lat = 0.0, // Placeholder, unless you have lat/lon
+        lat = 0.0,
         lon = 0.0,
         desc = this.snippet ?: "",
         imageUrl = "",

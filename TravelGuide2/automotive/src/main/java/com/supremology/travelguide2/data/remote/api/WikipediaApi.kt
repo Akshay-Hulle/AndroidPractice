@@ -1,5 +1,6 @@
 package com.supremology.travelguide2.data.remote.api
 
+import com.supremology.travelguide2.data.remote.dto.CoordinatesResponse
 import com.supremology.travelguide2.data.remote.dto.NearbyPlacesResponse
 import com.supremology.travelguide2.data.remote.dto.PlaceDetailResponse
 import com.supremology.travelguide2.data.remote.dto.SearchResponse
@@ -16,6 +17,15 @@ interface WikipediaApi {
         @Query("format") format: String = "json",
         @Query("origin") origin: String = "*"
     ): SearchResponse
+
+    @GET("w/api.php")
+    suspend fun getPlaceCoordinates(
+        @Query("action") action: String = "query",
+        @Query("prop") prop: String = "coordinates",
+        @Query("pageids") pageIds: String,
+        @Query("format") format: String = "json",
+        @Query("origin") origin: String = "*"
+    ): CoordinatesResponse
 
     @GET("w/api.php")
     suspend fun getNearbyPlaces(

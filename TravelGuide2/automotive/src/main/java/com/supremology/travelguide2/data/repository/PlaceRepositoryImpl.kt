@@ -17,12 +17,34 @@ class PlaceRepositoryImpl @Inject constructor(
     override suspend fun searchPlaces(query: String): List<Place> {
         return try {
             val response = WikipediaApiService.api.searchPlaces(query = query)
-            response.query.search.map { it.toPlace() }
+            val basicResults = response.query.search
+
+            val pageIds = basicResults.joinToString("|") { it.pageid.toString() }
+
+            val coordMap = try {
+                WikipediaApiService.api.getPlaceCoordinates(pageIds= pageIds).query.pages
+            } catch (e: Exception) {
+                emptyMap()
+            }
+
+            basicResults.map { result ->
+                val coord = coordMap[result.pageid.toString()]?.coordinates?.firstOrNull()
+                Place(
+                    id = result.pageid,
+                    name = result.title,
+                    lat = coord?.lat ?: 0.0,
+                    lon = coord?.lon ?: 0.0,
+                    desc = result.snippet,
+                    imageUrl = "",
+                    category = ""
+                )
+            }
         } catch (e: Exception) {
             e.printStackTrace()
             emptyList()
         }
     }
+
 
     override suspend fun getNearbyPlaces(lat: Double, lon: Double): List<Place> {
         val coord = "$lat|$lon"
