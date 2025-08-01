@@ -17,6 +17,7 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
     }
 
     buildTypes {
@@ -78,6 +79,10 @@ dependencies {
     implementation ("androidx.fragment:fragment-ktx:1.6.2")
     implementation ("androidx.appcompat:appcompat:1.6.1")
 
+    implementation("org.osmdroid:osmdroid-android:6.1.16")
+//    implementation("org.osmdroid:osmbonuspack:6.6.0")
+    implementation("io.coil-kt:coil:2.4.0")
+    implementation("com.google.android.material:material:1.11.0")
 
 
 }

@@ -1,6 +1,7 @@
 package com.supremology.travelguide2.data.repository
 
 import android.content.Context
+import android.util.Log
 import com.supremology.travelguide2.data.remote.WikipediaApiService
 import com.supremology.travelguide2.data.remote.mapper.toPlace
 import com.supremology.travelguide2.data.remote.mapper.updatePlace
@@ -45,10 +46,10 @@ class PlaceRepositoryImpl @Inject constructor(
         }
     }
 
-
     override suspend fun getNearbyPlaces(lat: Double, lon: Double): List<Place> {
         val coord = "$lat|$lon"
         val geoResponse = WikipediaApiService.api.getNearbyPlaces(coord = coord)
+        Log.d("PlaceRepository", "Nearby geo response: ${geoResponse.query.geosearch.size} results")
 
         val basicPlaces = geoResponse.query.geosearch.map { it.toPlace() }
 
@@ -61,8 +62,6 @@ class PlaceRepositoryImpl @Inject constructor(
                 place
             }
         }
-
         return places
     }
 }
-

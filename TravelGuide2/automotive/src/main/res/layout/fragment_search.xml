@@ -8,7 +8,7 @@
 
     <EditText
         android:id="@+id/source_input"
-        android:hint="Search Source"
+        android:hint="Leave empty to use current location"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text" />

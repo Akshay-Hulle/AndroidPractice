@@ -18,7 +18,6 @@ fun GeoSearchItem.toPlace(): Place {
 }
 
 fun SearchResult.toPlace(): Place {
-
     return Place(
         id = this.pageid,
         name = this.title,
